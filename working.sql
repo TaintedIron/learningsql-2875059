@@ -1,3 +1,3 @@
-SELECT shirt_or_hat, state_code, first_name, last_name
+SELECT first_name, state_code
 FROM people
-WHERE (state_code='CA' OR state_code='CO') AND shirt_or_hat='shirt';
+JOIN states ON people.state_code = states.state_abbrev;
